@@ -1,4 +1,4 @@
-# Pointers to use the TV network database:
+# Pointers for using the TV data:
 
 Below are some pointers to understand the flow of scripts provided in this repository.
   1. Use the python script "Generate_Protected_Contour_Points.py" to generate a csv file comprising of the protected contour points for each TV transmitter in the United States. This script takes "TV_TOWER_DATA" as input.  
