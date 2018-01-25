@@ -1,4 +1,4 @@
-# TVWS-Database
+# TV-Database
 This database has been compiled for our work "Optimizing City-Wide Wi-Fi networks in TV white spaces". Below pointers may be helpful in understanding the database.
 
 1. TV_TOWER_DATA.csv has information related to TV networks for the United States.
