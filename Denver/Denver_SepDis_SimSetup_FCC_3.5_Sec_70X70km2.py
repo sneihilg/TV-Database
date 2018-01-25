@@ -1,4 +1,3 @@
-# Date: 2-Dec-2016
 # Code to generate data required for simulation setup
 # We need (a) coordinates of each cell (b) Closest Primary transmitter on each available channel (c) Worst case receiver location
 # on the service contour
@@ -17,7 +16,7 @@ startTime = datetime.now()
 Side_of_cell = 3.5
 P_total = 0.1
 
-Data = json.load(open('GradeB_SepDis_Denver_%.1fkm2Cell_Irregular_Sec70X70km2.json'%(Side_of_cell),'r'))
+Data = json.load(open('GradeB_SepDis_Denver_%.1fkm2_Cell_TVData_70X70km2.json'%(Side_of_cell),'r'))
 
 def Pri_rx_loc(poly_data,point_data):
     poly = Polygon(poly_data)
@@ -29,7 +28,7 @@ def Pri_rx_loc(poly_data,point_data):
     closest_point_dis = vincenty(point_data,closest_point_coords).miles*1.60934
     return closest_point_coords,closest_point_dis
     
-df = pd.read_csv('Denver_Irregular_Ser_Cont_Points_GradeB.csv')
+df = pd.read_csv('Denver_TVData_GradeB.csv')
 cols_to_use = df.columns
 cols_to_use = []
 for degree in range(1, 360, 2):
@@ -133,10 +132,10 @@ for cell in range(0,len(Data)):
        "TV_RX_Dist":(TV_Receiver_Dist[cell]),
        "Origin_xy":(Data[str(cell)]['Origin_xy'])}
     out_channels[cell] = out
-json.dump(out_channels, open('GrdB_Denver_SepDis_%.1fkm2_Sim_Setup_Sec70X70km2.json'%(Side_of_cell),'w')) 
+json.dump(out_channels, open('GrdB_Denver_SepDis_%.1fkm2_Sim_Setup_Sec_70X70km2.json'%(Side_of_cell),'w')) 
 
 
-Data = json.load(open('GrdB_Denver_SepDis_%.1fkm2_Sim_Setup_Sec70X70km2.json'%(Side_of_cell),'r'))
+Data = json.load(open('GrdB_Denver_SepDis_%.1fkm2_Sim_Setup_Sec_70X70km2.json'%(Side_of_cell),'r'))
 
 def find_rx_dis(RX_coord,cells_with_chan):
     for cell in range (0,len(cells_with_chan)):
