@@ -9,6 +9,7 @@ While FCC provides only the service contour points of any TV transmitter, we hav
 We use this database to compute channel availability and verify it with the information at https://spectrum.iconectiv.com/main/home/contour_vis.shtml. 
 
 Miscellaneous links:
+
     (a) To understand the concept of Grade A and Grade B contour, please see "Understanding television’s Grade A and Grade B Service contours" (http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=969381). 
     (b) To know the details of database calculations, please see http://spectrumbridge.com/wp-content/uploads/2014/08/Database-Calculation-Consistency-Specification.pdf. 
     (c) To study classes of TV transmitters and Grade A and Grade B contours, please see https://www.fcc.gov/media/radio/fm-station-classes
