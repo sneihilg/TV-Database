@@ -1,0 +1,6 @@
+Below are the pointers to the python scripts:
+1. Use "Generate_Denver_TVData_csv.py" and "Generate_Denver_TVData_SepDis_csv.py" to generate the csv file consisting of TV network information without and with protected contour points for the city of Denver. The csv files can be found in the sub-folder "\Denver_CSV_files".
+2. Use the csv files generated in (1) to generate a multi-cell Wi-Fi network and the related TV network information. 
+Use script "GradeB_Denver_%dkm2_Cell_TVData_70X70km.py" or "GradeB_SepDis_Denver_%dkm2_Cell_TVData_70X70km.py". Note: %d = cell area = [12.25 25 100] in our simulation.
+3. Use "Denver_SimSetup_FCC_%d_Sec_70X70km2.py" and "Denver_SepDis_SimSetup_FCC_3.5_Sec_70X70km2.py" to generate per cell information for the Wi-Fi network. The resulting JSON files include cell coordinates, channels available for the cell, TV network information corresponding to the available channels etc. The JSON files can be found in the sub-folder "\Denver_JSON_files".
+Note: While "GrdB_Denver_%dkm2_Sim_Setup_Sec_70X70km2.json" comprises of a list of afflicted TV receivers i.e. one TV receiver per cell which sees the channel available, "GrdB_Denver_%dkm2_Sim_Data_Sec_70X70km2.json" on the other hand consists of a single afflicted TV receiver location corresponding to the one that would be impacted the most by the Wi-Fi cells.
