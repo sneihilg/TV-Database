@@ -1,0 +1,5 @@
+Below are the pointers to the python scripts:
+1. Use "Generate_Columbus_TVData_csv.py" and "Generate_Columbus_TVData_SepDis_csv.py" to generate the csv file consisting of TV network information without and with protected contour points for the city of Columbus. The csv files can be found in the sub-folder "\Columbus_CSV_files".
+2. Use the csv files generated in (1) to generate a multi-cell Wi-Fi network and the related TV network information. 
+Use script "GradeB_Columbus_%dkm2_Cell_TVData_70X70km.py" or "GradeB_SepDis_Columbus_%dkm2_Cell_TVData_70X70km.py". Note: %d = cell area = [12.25 25 100] in our simulation.
+3. Use "Columbus_SimSetup_FCC_%d_Sec_70X70km2.py" and "Columbus_SepDis_SimSetup_FCC_3.5_Sec_70X70km2.py"
